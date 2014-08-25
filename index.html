@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="kendo/kendo.fire.js"></script>
+
+    <script src="app/components/everlive/src/everlive.all.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+</head>
+<body>
+ 
+  <div data-role="layout" data-id="main">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+      </div>
+    </div>
+
+    <!-- application views will be rendered here -->
+    
+  </div>
+
+  <!-- application drawer and contents -->
+  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+      </div>
+    </div>
+    <ul data-role="listview">
+      <li>
+        <a href="views/home.html">Home</a>
+      </li>
+      <li>
+        <a href="views/settings.html">Settings</a>
+      </li>
+      <li>
+        <a href="views/contacts.html">Contacts</a>
+      </li>
+    </ul>
+  </div>       
+
+</body>
+</html>

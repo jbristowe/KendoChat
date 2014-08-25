@@ -1,0 +1,9 @@
+<div data-role="view" id="login" data-model="APP.models.login">
+  <div data-role="listview">
+    <li>Username: <input type="text" id="username" data-bind="value: username"></li>
+    <li>Password: <input type="text" id="password" data-bind="value: password"></li>
+    <li><button data-role="button" data-bind="click: login">Login</button></li>
+    <div class="block error">
+      <p data-bind="html: result"></p>
+    </div>
+</div>

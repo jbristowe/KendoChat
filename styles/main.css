@@ -1,0 +1,81 @@
+.block {
+  border-radius: 4px;
+  margin: 10px;
+  padding: 2px;
+}
+
+.block.info {
+  color: #50607f;
+  border-color: #d0d9df;
+  background-color: #f0f9ff;
+}
+
+.block.error {
+  color: #7f5050;
+  border-color: #dfd0d0;
+  background-color: #fff0f0;
+}
+
+.km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
+
+.bubble-from {
+  position: relative;
+  width: 220px;
+  padding: 10px;
+  margin-left: 20px;
+  background: #eee;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.message-footer {
+  background-color: #eee;
+}
+
+.message {
+  width: 78%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #eee;
+  padding: 10px;
+}
+
+
+
+.bubble-from:after  {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent #efefef;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -10px;
+  top: 5px;
+}
+
+.bubble-to {
+  position: relative;
+  width: 220px;
+  padding: 10px;
+  margin-left: 20px;
+  background: #eee;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.bubble-to:after  {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent #efefef;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -10px;
+  top: 5px;
+}
