@@ -4,11 +4,15 @@
     email: '',
     password: '',
     message: '',
+    displayName: '',
     register: function() {
+
       var that = this,
           email = this.get('email'),
-          password = this.get('password');
-      app.everlive.Users.register(email, password, { email: email },
+          password = this.get('password'),
+          displayName = this.get('displayName');
+
+      app.everlive.Users.register(email, password, { Email: email, DisplayName: displayName },
         function() {
           app.instance.navigate('views/chat/chat.html');
         },
