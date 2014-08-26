@@ -12,7 +12,7 @@
 
       app.everlive.Users.login(username, password,
         function(data) {
-          that.set('result', data);
+          app.instance.navigate('views/chat/chat.html');
         },
         function(data) {
           that.set('result', data.message);

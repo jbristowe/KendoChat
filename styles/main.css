@@ -18,6 +18,19 @@
 
 .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
 
+.k-widget.k-tooltip-validation {
+  color: #7f5050;
+  border-color: transparent;
+  background-color: #fff0f0;
+  text-align: left;
+  border-radius: none;
+}
+
+.k-tooltip {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .bubble-from {
   position: relative;
   width: 220px;
