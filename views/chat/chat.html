@@ -1,13 +1,18 @@
 <div data-role="view" data-title="Chat" data-layout="main" data-model="APP.models.chat">
   <div data-role="listview" data-bind="source: firebase" data-template="chatTemplate"></div>
   <div class="message-footer" data-role="footer">
-    <input class="message" data-bind="value: message">
+    <input class="message" id="messageTextBox" />
     <button data-role="button" data-bind="click: send">Send</button>
   </div>
 </div>
 
 <script type="text/x-kendo-template" id="chatTemplate">
+  # if (userId === APP.currentUser.Id) { #
+  <div class="bubble-to">#: message #</div>
+  # } else { #
+  <div class="iconBox"><i class="fa fa-user"></i></div>
   <div class="bubble-from">#: message #</div>
+  # } #
 </script>
 
 <script src="views/chat/chat.js"></script>

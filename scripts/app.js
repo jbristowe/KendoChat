@@ -4,6 +4,7 @@
     // create an object to store the models for each view
     window.APP = {
       everlive: new Everlive('KIpTqrQhHSzEMBf1'),
+      currentUser: undefined,
       models: {}
     };
 

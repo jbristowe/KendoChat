@@ -11,10 +11,13 @@
       var password = this.get('password').trim();
 
       app.everlive.Users.login(username, password,
-        function(data) {
+        function (data) {
+          app.everlive.Users.currentUser().then(function (data) {
+            app.currentUser = data.result;
+          });
           app.instance.navigate('views/chat/chat.html');
         },
-        function(data) {
+        function (data) {
           that.set('result', data.message);
         }
       );

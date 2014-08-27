@@ -1,4 +1,8 @@
-(function(app) {
+(function(app, $) {
+
+  if (!app.currentUser) {
+    app.instance.navigate('views/login/login.html');
+  }
 
   app.models.chat = {
     title: 'Chat',
@@ -11,16 +15,25 @@
       },
       schema: {
         model: {
-          id: 'id'
+          id: 'id',
+          fields: {
+            'userId': { type: 'string' },
+            'message': { type: 'string' }
+          }
         }
       },
       autoSync: true
     }),
-    message: 'No',
     send: function() {
-      var ds = this.get('firebase');
-      ds.add({ message: this.get('message') });
+      app.everlive.Users.currentUser()
+      .then(function (data) {
+        var msg = {};
+        msg.userId = app.currentUser.Id;
+        msg.message = $('#messageTextBox').val();
+        app.models.chat.firebase.add(msg);
+        $('#messageTextBox').val('');
+      });
     }
   };
 
-}(window.APP));
+}(window.APP, window.jQuery));
