@@ -54,8 +54,6 @@
   padding: 10px;
 }
 
-
-
 .bubble-from:after  {
   content: '';
   position: absolute;
