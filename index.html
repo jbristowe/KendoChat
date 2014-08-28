@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link href="kendo/styles/web/kendo.common.core.min.css" rel="stylesheet" />
-    <link href="kendo/styles/web/kendo.flat.min.css" rel="stylesheet" />
-    <link href="kendo/styles/mobile/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="components/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
-
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-
-    <script src="components/firebase/firebase.js"></script>
-
-    <script src="kendo/js/kendo.ui.core.min.js"></script>
-    
-    <script src="components/kendo-fire/kendo.firebase.js"></script>
-
-    <script src="components/everlive/src/everlive.all.js"></script>
-
-    <script src="scripts/app.js"></script>
-
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="components/kendo-ui/styles/kendo.flat.mobile.min.css" />
+  <link rel="stylesheet" href="components/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="cordova.js"></script>
+  <script src="components/kendo-ui/js/jquery.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.core.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.data.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.binder.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.fx.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.userevents.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.draganddrop.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.scroller.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.view.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.view.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.loader.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.pane.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.router.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.application.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.button.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.listview.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.navbar.min.js"></script>
+  <script src="components/kendo-ui/js/kendo.mobile.drawer.min.js"></script>
+  <script src="components/everlive/src/everlive.all.js"></script>
+  <script src="components/firebase/firebase.js"></script>
+  <script src="components/kendo-fire/kendo.firebase.js"></script>
+  <script src="scripts/app.js"></script>
 </head>
 <body>
-
   <div data-role="layout" data-id="main">
     <div data-role="header">
       <div data-role="navbar">
@@ -32,11 +38,8 @@
         <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
       </div>
     </div>
-
     <!-- application views will be rendered here -->
-    
   </div>
-
   <!-- application drawer and contents -->
   <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
     <div data-role="header">
@@ -45,17 +48,10 @@
       </div>
     </div>
     <ul data-role="listview">
-      <li>
-        <a href="views/home.html">Home</a>
-      </li>
-      <li>
-        <a href="views/settings.html">Settings</a>
-      </li>
-      <li>
-        <a href="views/contacts.html">Contacts</a>
-      </li>
+      <li><a href="views/home.html">Home</a></li>
+      <li><a href="views/settings.html">Settings</a></li>
+      <li><a href="views/contacts.html">Contacts</a></li>
     </ul>
-  </div>       
-
+  </div>
 </body>
 </html>
