@@ -31,15 +31,8 @@
   box-shadow: none;
 }
 
-.bubble-from {
-  position: relative;
-  width: 220px;
-  padding: 10px;
-  margin-left: 20px;
-  background: #eee;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+#chatLog > li {
+  border-style: none;
 }
 
 .message-footer {
@@ -54,39 +47,60 @@
   padding: 10px;
 }
 
+.bubble-from {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  padding: 10px;
+  margin-left: 40px;
+  background: #10C4B2;
+}
+
 .bubble-from:after  {
   content: '';
   position: absolute;
   border-style: solid;
-  border-width: 15px 15px 15px 0;
-  border-color: transparent #efefef;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #10C4B2;
   display: block;
+  left: -5px;
+  top: 13px;
   width: 0;
   z-index: 1;
-  left: -10px;
-  top: 5px;
+}
+
+.iconBox {
+  color: #10C4B2;
+  display: inline;
+  font-size: 30px;
+  position: absolute;
+  left: 10px;
+  text-align: center;
+  vertical-align: center;
+  width: 25px;
 }
 
 .bubble-to {
-  position: relative;
-  width: 220px;
+  background: #EEE;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 6px;
   padding: 10px;
-  margin-left: 20px;
-  background: #eee;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  position: relative;
 }
 
 .bubble-to:after  {
   content: '';
   position: absolute;
   border-style: solid;
-  border-width: 15px 15px 15px 0;
-  border-color: transparent #efefef;
+  border-width: 5px 0px 5px 5px;
+  border-color: transparent #EEE;
   display: block;
   width: 0;
   z-index: 1;
-  left: -10px;
-  top: 5px;
+  right: -5px;
+  top: 13px;
 }
