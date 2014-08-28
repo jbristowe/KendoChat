@@ -4,7 +4,7 @@
 
     username: '',
     password: '',
-    result: 'all good',
+    result: 'OK',
     login: function() {
       var that = this;
       var username = this.get('username').trim();
