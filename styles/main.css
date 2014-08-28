@@ -36,6 +36,11 @@
   border-style: none;
 }
 
+#contactsListView > li > div > div {
+  color: #AAA;
+  font-size: 0.6em;
+}
+
 .message-footer {
   background-color: #eee;
 }
@@ -46,6 +51,12 @@
   border-radius: 10px;
   background-color: #eee;
   padding: 10px;
+}
+
+.bubble-contact {
+  color: #4C5356;
+  position: relative;
+  margin-left: 40px;
 }
 
 .bubble-from {
@@ -75,7 +86,7 @@
 .iconBox {
   color: #10C4B2;
   display: inline;
-  font-size: 30px;
+  font-size: 28px;
   position: absolute;
   left: 10px;
   text-align: center;

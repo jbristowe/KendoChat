@@ -1,4 +1,5 @@
-(function(app) {
+(function(app, $) {
+  'use strict';
 
   app.models.register = {
     email: '',
@@ -8,13 +9,10 @@
     valid: true,
     failure: false,
     register: function() {
-
       this.set('valid', $('#register').data('kendoValidator').validate());
 
       var valid = this.get('valid');
-
       if (valid) {
-
         var that = this,
             email = this.get('email'),
             password = this.get('password'),
@@ -33,4 +31,4 @@
     }
   };
 
-}(window.APP));
+}(window.APP, window.jQuery));

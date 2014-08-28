@@ -1,31 +1,45 @@
+window.APP = (function (win) {
+  'use strict';
 
-(function () {
+  document.addEventListener('deviceready', function () {  
+    navigator.splashscreen.hide();
+    win.APP.instance = new kendo.mobile.Application(document.body, {
+      skin: 'flat',
+      initial: 'views/login/login.html'
+    });
+  }, false);
 
-    // create an object to store the models for each view
-    window.APP = {
-      everlive: new Everlive('KIpTqrQhHSzEMBf1'),
-      currentUser: { Id: -1 },
-      models: {}
-    };
+  var el = new Everlive('jxlpND69mEYBcOt7');
 
-    // this function is called by Cordova when the application is loaded by the device
-    document.addEventListener('deviceready', function () {  
-      
-      // hide the splash screen as soon as the app is ready. otherwise
-      // Cordova will wait 5 very long seconds to do it for you.
-      navigator.splashscreen.hide();
+  var emptyGuid = '00000000-0000-0000-0000-000000000000';
 
-      window.APP.instance = new kendo.mobile.Application(document.body, {
-        
-        // comment out the following line to get a UI which matches the look
-        // and feel of the operating system
-        skin: 'flat',
+  var AppHelper = {
+    resolveProfilePictureUrl: function (id) {
+      if (id && id !== emptyGuid) {
+        return el.Files.getDownloadUrl(id);
+      } else {
+        // TODO: return an alternative
+      }
+    },
+    getUserById: function (id) {
+      var result = $.grep(win.APP.users, function (e) { return e.Id == id; });
+      if (result.length === 0) return { Id: -1, PictureUrl: '' };
+      return result[0];
+    },
+    logout: function () {
+      win.APP.currentUser = { Id: -1 };
+      win.APP.users = new kendo.data.ObservableArray([{Id: -1, DisplayName: 'Bob Smith', Picture: '00000000-0000-0000-0000-000000000000', PictureUrl: '', Email: 'foo@bar.com'}]);
+      return el.Users.logout();
+    }
+  };
 
-        // the application needs to know which view to load first
-        initial: 'views/login/login.html'
-      });
+  return {
+    currentUser: { Id: -1 },
+    emptyGuid: emptyGuid,
+    helper: AppHelper,
+    models: {},
+    everlive: el,
+    users: new kendo.data.ObservableArray([{Id: -1, DisplayName: 'Bob Smith', Picture: '00000000-0000-0000-0000-000000000000', PictureUrl: '', Email: 'foo@bar.com'}]),
+  };
 
-    }, false);
-
-
-}());
+}(window));

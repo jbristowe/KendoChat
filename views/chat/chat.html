@@ -1,4 +1,4 @@
-<div data-role="view" data-title="Chat" data-layout="main" data-model="APP.models.chat">
+<div data-role="view" data-title="Chat" data-layout="main" data-model="APP.models.chat" data-show="APP.chat.show">
   <div id="chatLog" data-role="listview" data-bind="source: firebase" data-template="chatTemplate"></div>
   <div class="message-footer" data-role="footer">
     <input class="message" id="messageTextBox" />
@@ -10,7 +10,11 @@
   # if (userId == APP.currentUser.Id) { #
   <div class="bubble-to">#: message #</div>
   # } else { #
+  #   if (APP.helper.getUserById(userId).PictureUrl !== '') { #
+  <div class="iconBox"><img height="32" src="#: APP.helper.getUserById(userId).PictureUrl #" width="32" /></div>
+  #   } else { #
   <div class="iconBox"><i class="fa fa-user"></i></div>
+  #   } #
   <div class="bubble-from">#: message #</div>
   # } #
 </script>

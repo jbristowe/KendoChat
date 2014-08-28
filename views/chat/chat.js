@@ -1,8 +1,17 @@
-(function(app, $) {
+window.APP = window.APP || {};
 
-  if (!app.currentUser) {
+window.APP.chat = (function(app, $) {
+  'use strict';
+
+  console.log(app.currentUser);
+
+  if (app.currentUser.Id == -1) {
     app.instance.navigate('views/login/login.html');
   }
+
+  var show = function (e) {
+    $('#chatLog').data('kendoMobileListView').refresh();
+  };
 
   app.models.chat = {
     title: 'Chat',
@@ -34,6 +43,10 @@
         $('#messageTextBox').val('');
       });
     }
+  };
+
+  return {
+    show: show
   };
 
 }(window.APP, window.jQuery));
