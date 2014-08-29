@@ -24,7 +24,7 @@
   "dependencies": {
     "fontawesome": "~4.2.0",
     "everlive": "~1.2.5",
-    "kendo-ui-core": "~2014.2.716",
+    "kendo-ui": ">=2014.2.716",
     "kendo-fire": "*"
   }
 }
