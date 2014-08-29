@@ -24,7 +24,10 @@
   background-color: #fff0f0;
 }
 
-.km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
+.km-drawer-button:before,
+.km-drawer-button:after {
+  content: "\E077";
+}
 
 .k-widget.k-tooltip-validation {
   color: #7f5050;
@@ -158,13 +161,13 @@
 }
 
 .bubble-from:after  {
-  content: '';
-  position: absolute;
+  border-color: transparent #10C4B2;
   border-style: solid;
   border-width: 7px 7px 7px 0;
-  border-color: transparent #10C4B2;
+  content: '';
   display: block;
   left: -6px;
+  position: absolute;
   top: 10px;
   width: 0;
   z-index: 1;
@@ -182,4 +185,16 @@
   padding-top: 10px;
   position: relative;
   text-align: right;
+}
+
+.km-list > .active:before {
+  border-color: transparent #10C4B2;
+  border-style: solid;
+  border-width: 3px;
+  background-color: #10C4B2;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
 }
