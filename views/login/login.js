@@ -12,7 +12,6 @@ window.APP.login = (function(app, $, kendo) {
   app.models.login = {
     username: 'john@bristowe.com',
     password: '123',
-    result: 'OK',
     login: function () {
       var that = this;
       var username = this.get('username').trim();
@@ -37,7 +36,7 @@ window.APP.login = (function(app, $, kendo) {
           });
         },
         function (data) {
-          that.set('result', data.message);
+          // TODO: save token?
         }
       );
     }
