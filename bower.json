@@ -4,7 +4,7 @@
   "homepage": "https://github.com/jbristowe/KendoChat",
   "authors": [
     "John Bristowe <john@bristowe.com>",
-    "Burke Holland <burkeholland@gmail.com>",
+    "Burke Holland <burkeholland@gmail.com>"
   ],
   "description": "A simple chat application with Kendo UI Mobile, Telerik Backend Services, and Firebase.",
   "keywords": [
