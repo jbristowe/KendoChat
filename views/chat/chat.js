@@ -3,14 +3,21 @@ window.APP = window.APP || {};
 window.APP.chat = (function(app, $) {
   'use strict';
 
-  console.log(app.currentUser);
-
   if (app.currentUser.Id == -1) {
     app.instance.navigate('views/login/login.html');
   }
 
+  var updateSendButton = function () {
+    $('#sendButton').data('kendoMobileButton').enable($('#messageTextBox').val().length);
+  }
+
   var show = function (e) {
     $('#chatLog').data('kendoMobileListView').refresh();
+    updateSendButton();
+
+    $('#messageTextBox').keyup(function () {
+      updateSendButton();
+    });
   };
 
   app.models.chat = {
@@ -33,7 +40,7 @@ window.APP.chat = (function(app, $) {
       },
       autoSync: true
     }),
-    send: function() {
+    send: function () {
       app.everlive.Users.currentUser()
       .then(function (data) {
         var msg = {};
@@ -41,7 +48,11 @@ window.APP.chat = (function(app, $) {
         msg.message = $('#messageTextBox').val();
         app.models.chat.firebase.add(msg);
         $('#messageTextBox').val('');
+        updateSendButton();
       });
+    },
+    sendButtonEnabled: function () {
+      return $("#messageTextBox").val().length !== 0;
     }
   };
 

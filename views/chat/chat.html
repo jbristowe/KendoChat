@@ -1,8 +1,8 @@
 <div data-role="view" data-title="Chat" data-layout="main" data-model="APP.models.chat" data-show="APP.chat.show">
   <div id="chatLog" data-role="listview" data-bind="source: firebase" data-template="chatTemplate"></div>
   <div class="message-footer" data-role="footer">
-    <input class="message" id="messageTextBox" />
-    <button data-role="button" data-bind="click: send">Send</button>
+    <span class="messageTextBoxContainer"><input class="message" id="messageTextBox" placeholder="Type a message..." type="text" /></span>
+    <button data-role="button" data-bind="click: send" id="sendButton"><i class="fa fa-send"></i></button>
   </div>
 </div>
 
@@ -11,7 +11,7 @@
   <div class="bubble-to">#: message #</div>
   # } else { #
   #   if (APP.helper.getUserById(userId).PictureUrl !== '') { #
-  <div class="iconBox"><img height="32" src="#: APP.helper.getUserById(userId).PictureUrl #" width="32" /></div>
+  <img class="listview-photo" src="#: APP.helper.getUserById(userId).PictureUrl #" />
   #   } else { #
   <div class="iconBox"><i class="fa fa-user"></i></div>
   #   } #

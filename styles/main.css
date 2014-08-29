@@ -31,9 +31,18 @@
   box-shadow: none;
 }
 
+#chatLog {
+  padding: 10px;
+}
+
+#chatLog > li:first-child {
+  padding: 0px 0px 3px 0px;
+}
+
 #chatLog > li {
   background-color: transparent;
   border-style: none;
+  padding: 3px 0px 3px 0px;
 }
 
 #contactsListView > li > div > div {
@@ -43,20 +52,46 @@
 
 .message-footer {
   background-color: #eee;
+  display: table;
+  height: 30px;
+  width: 100%;
+}
+
+.messageTextBoxContainer {
+  display: table-cell;
+  padding-left: 3px;
+  width: 100%;
 }
 
 .message {
-  width: 78%;
-  height: 30px;
-  border-radius: 10px;
-  background-color: #eee;
-  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-width: 0;
+  padding: 5px;
+  width: 100%;
+}
+
+#sendButton {
+  background-color: transparent;
+  border-color: transparent;
+  display: table-cell;
+  margin: 0;
+  padding: 5px;
 }
 
 .bubble-contact {
   color: #4C5356;
-  position: relative;
   margin-left: 40px;
+}
+
+.listview-photo {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  height: 32px;
+  width: 32px;
 }
 
 .bubble-from {
@@ -66,7 +101,7 @@
   color: white;
   position: relative;
   padding: 10px;
-  margin-left: 40px;
+  margin-left: 45px;
   background: #10C4B2;
 }
 
@@ -74,24 +109,20 @@
   content: '';
   position: absolute;
   border-style: solid;
-  border-width: 5px 5px 5px 0;
+  border-width: 7px 7px 7px 0;
   border-color: transparent #10C4B2;
   display: block;
-  left: -5px;
-  top: 13px;
+  left: -6px;
+  top: 10px;
   width: 0;
   z-index: 1;
 }
 
 .iconBox {
   color: #10C4B2;
-  display: inline;
-  font-size: 28px;
-  position: absolute;
-  left: 10px;
-  text-align: center;
-  vertical-align: center;
-  width: 25px;
+  display: flex;
+  font-size: 32px;
+  float: left;
 }
 
 .bubble-to {
@@ -108,11 +139,11 @@
   content: '';
   position: absolute;
   border-style: solid;
-  border-width: 5px 0px 5px 5px;
+  border-width: 7px 0px 7px 7px;
   border-color: transparent #EEE;
   display: block;
   width: 0;
   z-index: 1;
-  right: -5px;
+  right: -6px;
   top: 13px;
 }
