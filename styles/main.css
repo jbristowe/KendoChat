@@ -1,3 +1,11 @@
+.km-flat,
+.km-flat .km-navbar,
+.km-flat .km-content,
+.km-flat .km-group-title,
+.km-flat .km-listview-link {
+  font-family: "Open Sans", sans-serif;
+}
+
 .block {
   border-radius: 4px;
   margin: 10px;
@@ -31,6 +39,46 @@
   box-shadow: none;
 }
 
+.telerik-container {
+  height: 200px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+#username,
+#password {
+  position: relative;
+  width: 100%;
+}
+
+#username:before,
+#password:before {
+  position: absolute;
+  top: 50%;
+  right: .75em;
+  display: block;
+  margin-top: -.5em;
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  content: '';
+}
+
 #chatLog {
   padding: 10px;
 }
@@ -53,13 +101,15 @@
 .message-footer {
   background-color: #eee;
   display: table;
-  height: 30px;
+  height: 34px;
   width: 100%;
 }
 
 .messageTextBoxContainer {
   display: table-cell;
-  padding-left: 3px;
+  margin: 0;
+  padding-left: 8px;
+  vertical-align: middle;
   width: 100%;
 }
 
@@ -68,6 +118,7 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
   border-width: 0;
+  height: 100%;
   padding: 5px;
   width: 100%;
 }
@@ -76,8 +127,9 @@
   background-color: transparent;
   border-color: transparent;
   display: table-cell;
-  margin: 0;
-  padding: 5px;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 8px;
 }
 
 .bubble-contact {
