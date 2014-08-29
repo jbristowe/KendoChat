@@ -1,0 +1,30 @@
+{
+  "name": "KendoChat",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jbristowe/KendoChat",
+  "authors": [
+    "John Bristowe <john@bristowe.com>",
+    "Burke Holland <burkeholland@gmail.com>",
+  ],
+  "description": "A simple chat application with Kendo UI Mobile, Telerik Backend Services, and Firebase.",
+  "keywords": [
+    "kendo-ui",
+    "kendo-ui-core",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.2.0",
+    "everlive": "~1.2.5",
+    "kendo-ui-core": "~2014.2.716",
+    "kendo-fire": "*"
+  }
+}
