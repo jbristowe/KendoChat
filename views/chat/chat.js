@@ -26,7 +26,7 @@ window.APP.chat = (function(app, $) {
       type: 'firebase',
       transport: {
         firebase: {
-          url: 'https://kendochat.firebaseio.com/logs'
+          url: app.firebaseUrl + 'logs'
         }
       },
       schema: {
