@@ -52,14 +52,13 @@
       <li class="active"><a class="drawer-link" href="views/chat/chat.html"><i class="fa fa-comment fa-fw"></i> Chat</a></li>
       <li><a class="drawer-link" href="views/contacts/contacts.html"><i class="fa fa-users fa-fw"></i> Contacts</a></li>
       <li><a class="drawer-link" href="views/settings.html"><i class="fa fa-cog fa-fw"></i> Settings</a></li>
-      <li><a class="drawer-link" href="views/login/login.html"><i class="fa fa-power-off fa-fw"></i> Sign Out</a></li>
+      <li><a href="views/login/login.html"><i class="fa fa-power-off fa-fw"></i> Sign Out</a></li>
     </ul>
   </div>
   <script>
-    $(".drawer-link").click(function() {
+    $(".drawer-link").on('click touchstart', function() {
       $(".drawer-link").parent().removeClass("active");
       $(this).parent().addClass("active");
-      return false;
     });
   </script>
 </body>
