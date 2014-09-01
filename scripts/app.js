@@ -11,7 +11,8 @@ window.APP = (function (win) {
 
   var el = new Everlive('jxlpND69mEYBcOt7');
   var emptyGuid = '00000000-0000-0000-0000-000000000000';
-  var firebaseUrl = 'https://kendochat.firebaseio.com/';
+  var firebaseRef = 'https://kendochat.firebaseio.com/';
+  var usersOnlineRef = 'user-names-online';
 
   var AppHelper = {
     resolveProfilePictureUrl: function (id) {
@@ -36,7 +37,8 @@ window.APP = (function (win) {
   return {
     currentUser: { Id: -1 },
     emptyGuid: emptyGuid,
-    firebaseUrl: firebaseUrl,
+    firebaseRef: firebaseRef,
+    usersOnlineRef: usersOnlineRef,
     helper: AppHelper,
     models: {},
     everlive: el,

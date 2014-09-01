@@ -26,7 +26,7 @@ window.APP.chat = (function(app, $) {
       type: 'firebase',
       transport: {
         firebase: {
-          url: app.firebaseUrl + 'logs'
+          url: app.firebaseRef + 'logs'
         }
       },
       schema: {

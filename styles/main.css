@@ -111,28 +111,32 @@
 .messageTextBoxContainer {
   display: table-cell;
   margin: 0;
-  padding-left: 8px;
   vertical-align: middle;
   width: 100%;
 }
 
 .message {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   border-width: 0;
+  display: table-cell;
   height: 100%;
   padding: 5px;
   width: 100%;
 }
 
-#sendButton {
+.message-button-container {
+  vertical-align: middle;
+}
+
+.message-button {
   background-color: transparent;
   border-color: transparent;
   display: table-cell;
-  height: 100%;
-  padding-left: 5px;
-  padding-right: 8px;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 5px 0px 5px;
+  vertical-align: middle;
 }
 
 .bubble-contact {
@@ -149,10 +153,17 @@
   width: 32px;
 }
 
+.chat-display-name {
+  color: #10C4B2;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-left: 45px;
+}
+
 .bubble-from {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   color: white;
   position: relative;
   padding: 10px;
