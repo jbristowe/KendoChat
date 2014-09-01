@@ -1,18 +1,21 @@
-window.APP = (function (win) {
+window.APP = (function (win, kendo) {
   'use strict';
+
+  var os = kendo.support.mobileOS,  
+      statusBarStyle = !navigator.simulator && os.ios && os.flatVersion >= 700 ? "black-translucent" : "black",
+      el = new Everlive('jxlpND69mEYBcOt7'),
+      emptyGuid = '00000000-0000-0000-0000-000000000000',
+      firebaseRef = 'https://kendochat.firebaseio.com/',
+      usersOnlineRef = 'user-names-online';
 
   document.addEventListener('deviceready', function () {  
     navigator.splashscreen.hide();
     win.APP.instance = new kendo.mobile.Application(document.body, {
       skin: 'flat',
+      statusBarStyle: statusBarStyle,
       initial: 'views/login/login.html'
     });
   }, false);
-
-  var el = new Everlive('jxlpND69mEYBcOt7');
-  var emptyGuid = '00000000-0000-0000-0000-000000000000';
-  var firebaseRef = 'https://kendochat.firebaseio.com/';
-  var usersOnlineRef = 'user-names-online';
 
   var AppHelper = {
     resolveProfilePictureUrl: function (id) {
@@ -45,4 +48,4 @@ window.APP = (function (win) {
     users: new kendo.data.ObservableArray([{Id: -1, DisplayName: 'Bob Smith', Picture: '00000000-0000-0000-0000-000000000000', PictureUrl: '', Email: 'foo@bar.com'}]),
   };
 
-}(window));
+}(window, window.kendo));
